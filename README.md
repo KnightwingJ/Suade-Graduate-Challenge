@@ -2,20 +2,20 @@
 Graduate Challenge. Take in large dataset and return summary statistics
 
 # Project Structure
-app/
-    main.py --- FastAPI entry point
-    config.py --- Configs
-    models.py --- Pydantic Models
-    services/
-        data_loader.py --- CSV Upload and Storage Logic
-        summary_services.py --- Summary Calculation Logic
-    routes/
-        upload.py --- /upload Endpoint
-        summary.py --- /summary/user_id Endpoint
-    utils.py --- Helpers
-        _init_.py
-
-tests/
-
-requirements.txt
+app/<br>
+    main.py --- FastAPI entry point<br>
+    config.py --- Configs<br>
+    models.py --- Pydantic Models<br>
+    services/<br>
+        data_loader.py --- CSV Upload and Storage Logic<br>
+        summary_services.py --- Summary Calculation Logic<br>
+    routes/<br>
+        upload.py --- /upload Endpoint<br>
+        summary.py --- /summary/user_id Endpoint<br>
+    utils.py --- Helpers<br>
+        _init_.py<br>
+<br>
+tests/<br>
+<br>
+requirements.txt<br>
 README.md
