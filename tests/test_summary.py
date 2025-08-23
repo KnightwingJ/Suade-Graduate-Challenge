@@ -35,3 +35,8 @@ def test_summary_date_filter():
     assert data["min_amount"] == 200.0
     assert data["max_amount"] == 200.0
     assert data["mean_amount"] == 200.0
+
+def test_summary_no_data():
+    response = client.get("/summary/999999")
+    assert response.status_code==404
+    assert response.json()["detail"] == "No Data found for given filters"
