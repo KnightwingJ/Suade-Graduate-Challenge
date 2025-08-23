@@ -4,7 +4,7 @@ from app.models import SummaryResponse
 
 router = APIRouter(prefix="/summary",tags=["Summary"])
 
-@router.get("/{user_id}", respone_model=SummaryResponse)
+@router.get("/{user_id}", response_model=SummaryResponse)
 async def get_summary(user_id: int,
                       start_date: str=Query(None),
                       end_date: str = Query(None)):
