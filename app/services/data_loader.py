@@ -8,5 +8,5 @@ DATAFRAME = None
 async def load_csv(file: UploadFile):
     global DATAFRAME
     content = await file.read()
-    df = pd.read_csv(StringIO(content.decode("utf-8")))
+    df = pd.read_csv(StringIO(content.decode("utf-8")), parse_dates=["timestamp"])
     DATAFRAME = df
