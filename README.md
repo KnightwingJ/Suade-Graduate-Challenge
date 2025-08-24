@@ -49,32 +49,29 @@ README.md
   transaction_id, user_id, product_id, timestamp, transaction_amount
   ```
 
-📌 Example with curl:
+Example with curl:
 ```bash
 curl -X POST "http://127.0.0.1:8000/upload/"   -F "file=@dummy_transactions.csv"
 ```
 
-📌 Response:
+Response:
 ```json
 {
   "message": "File uploaded and processed successfully."
 }
 ```
-
----
-
 ### 2. **Get Summary Statistics**
 **GET /summary/{user_id}**
 
 - Returns min, max, and mean transaction_amount for a given user_id.  
 - Optional filters: start_date, end_date (YYYY-MM-DD or ISO datetime).
 
-📌 Example:
+Example:
 ```bash
 curl "http://127.0.0.1:8000/summary/101?start_date=2024-01-01&end_date=2024-02-01"
 ```
 
-📌 Response:
+Response:
 ```json
 {
   "user_id": 101,
@@ -83,5 +80,23 @@ curl "http://127.0.0.1:8000/summary/101?start_date=2024-01-01&end_date=2024-02-0
   "mean_amount": 125.0
 }
 ```
+## Testing
+<ul>
+    <li>Run the full test suite
+        <ul><li>pytest -v -s</li></ul>
+    </li>
+    <li>Run specific file
+        <ul><li>pytest tests/test_summary.py -v</li></ul>
+    </li>
+</ul>
 
----
+Testing includes
+<ul>
+    <li>Valid and invalid file uploads</li>
+    <li>Summaries for users</li>
+    <li>Date Filtering</li>
+    <li>Large datasets</li>
+</ul>
+
+### Author
+John Hinch - Suade Graduate Challenge
